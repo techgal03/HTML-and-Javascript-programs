@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+	<title> Array Reversal</title>
+	<script>
+		var arr = [1,2,3,4,5,6,7,8,9];
+		function reversal()
+		{
+			document.getElementById("dispArr").innerHTML = document.getElementById("dispArr").innerHTML + arr;
+			var n = arr.length;
+			var arrrev = [];
+			var x = 0;
+			for(i = n-1; i >= 0; i--)
+			{
+				for(j = x; j<= x;)
+				{
+				arrrev[j] = [arr[i]];
+				j++;
+				}
+				x++;
+			}
+			document.getElementById("dispArrRev").innerHTML = document.getElementById("dispArrRev").innerHTML + arrrev;
+		}
+		
+	</script>
+</head>
+<body>
+	<h3> Click here to go to <a href = "Assignments.html" target = "_self"> Assignments </a> page </h3>
+	<button onclick = "reversal()"> Click to reverse </button>
+	<p id = "dispArr"> The array wil be displayed here : </p>
+	<p id = "dispArrRev"> the reversed list will be displayed here : </p>
+</body>
+</html>
