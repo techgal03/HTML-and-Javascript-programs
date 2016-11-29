@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title> Fibonacci series </title>
+	
+</head>
+<body>
+	<h3> Click here to go to <a href = "Assignments.html" target = "_self"> Assignments </a> page </h3>
+	
+	<p id = "demo"> Hi there </p>
+
+	<script type="text/javascript">
+		function fibon()
+		{
+			var a = 0
+			var b = 1
+			var c
+			document.getElementById("demo").innerHTML = a + b ;
+			for(i=1; i<=20; i++)
+			{
+				c = a + b;
+				document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML +"<br>" + c;
+				a = b;
+				b = c;
+			}
+		}
+
+		fibon();
+	</script>
+	
+</body>
+</html>
