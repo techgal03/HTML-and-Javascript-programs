@@ -1,4 +1,3 @@
 # HelloWorld
 Trying Github with this repository
-
-I am trying to use Github for personal use.
+This is a set of Javascript programs that I tried

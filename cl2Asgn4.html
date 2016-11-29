@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Check for palindrome</title>
+	<script type="text/javascript">
+		/*function checkPalin(palStr)
+		{
+			var arr = palStr.split("");
+			document.getElementById("demo").innerHTML = arr;
+			var n = arr.length;
+			var arrRev = [];
+			var j = 0;
+			for(i = n-1; i >= 0; i--)
+			{
+				arrRev[j] = arr[i];
+				j++;
+			}
+			document.getElementById("demo1").innerHTML = arrRev;
+			document.getElementById("demo2").innerHTML = "String is A Palindrome " ;
+			for(k=0; k<n; k++)
+			{
+				if(arr[k] != arrRev[k])
+				{
+					document.getElementById("demo2").innerHTML = "String is NOT A Palindrome " ;
+					break;
+				}
+				
+			}
+		}*/
+		function checkPalin(palStr)
+		{
+			var arr = palStr.split("");
+			document.getElementById("demo").innerHTML = arr;
+			var n = arr.length;
+			var arrRev = [];
+			var j = 0;
+			for(i = n-1; i >= 0; i--)
+			{
+				arrRev[j] = arr[i];
+				j++;
+			}
+			document.getElementById("demo1").innerHTML = arrRev;
+		
+		    var str1 = arr.toString();
+			var str2 = arrRev.toString();
+			
+			var s = str1.localeCompare(str2);
+
+			if (s == 0){
+				document.getElementById("demo2").innerHTML = "String is a palindrome";
+			}
+			else {
+				document.getElementById("demo2").innerHTML = "String is not a palindrome";
+			}
+        }
+        /*function checkPalin(palStr)
+        {
+        	if (palStr.length === 0)
+        	{
+        		return true;
+        	}
+        	if (palStr[0] !== palStr[palStr.length - 1])
+        	{
+        		return false;
+        	}
+        	else
+        	{
+        		return checkPalin(palStr.slice(1, palStr.length - 1));
+        	}
+        }
+        document.getElementById("demo2").innerHTML = checkPalin('apple'); */
+	</script>
+</head>
+<body>
+ 	<h3> Click here to go to <a href = "Assignments.html" target = "_self"> Assignments </a> page </h3>
+ 	<!--<input type = "text" name = "palin">-->
+ 	<button onclick = "checkPalin('malayalam')"> Click to check </button>
+ 	<p id = "demo"> string is displayed here</p>
+
+ 	<p id = "demo1"> String is reversed here</p>
+
+ 	<p id = "demo2"> Result is </p>
+ 
+
+</body>
+</html>
