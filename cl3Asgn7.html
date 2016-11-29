@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title>Webpage with forms and Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			 
+			$("#sDate, #eDate").datepicker();
+			//$("#eDate").datepicker();
+
+			$("#erase").click(function(){
+				$("#ordList li:last").remove();
+			});
+
+			$("#clear").click(function(){
+				$("#ordList").empty();
+			});
+
+			$("#save").click(function(){
+				var n = "<li>" + $("#fname").val() + $("#sDate").val() + "</li>";
+				$("#ordList").append(n);
+				$("#fname, #edate, #sdate").val("");
+
+			});
+
+			//$("#save").click(function(){ 	 	
+			//$("p").append("more text");
+
+			//});
+
+		});
+	</script>
+	<style type="text/css">
+		.form {
+			height: 500px;
+			width: 500px;
+			position: absolute;
+			left:600px;
+			top: 100px;
+			width:50%;
+		}
+		.formStyle{
+			margin: 10px;
+			box-sizing: border-box;
+		}
+		input{
+			width: 100%;
+			box-sizing: border-box;
+			height: 30px;
+		}
+		button{
+			width: 20%;
+			height: 30px;
+			margin: 10px;
+			border-radius: 5px;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<h2> Click here to go to <a href = "Assignments.html" target = "_self">Assignments</a> page </h2>
+	<h3> Welcome to my first JQuery page </h3>
+	
+	<ol id="ordList">
+		<li> John 10/23/2002 </li>
+		<li> Adam 05/15/2006 </li>
+		<li> Joe 03/02/2014 </li>
+		<li> Hello 07/30/2016 </li>
+	</ol>
+
+	<button id = "erase"> Delete Row </button>
+	<button id = "clear"> Clear All </button>
+	<div class = "form">
+		<form>
+			<label for="fname" class="formStyle"> Name </label>
+			<input type ="text" id = "fname" class="formStyle"></input><br>
+			<!-- <label for="lName" class="formStyle"> Last Name </label>
+			<input type ="text" id = "lname" class="formStyle"></input><br> -->
+			<label for="sDate" class="formStyle"> Start Date </label>
+			<input type ="text" id = "sDate" class="formStyle"></input><br>
+			<label class="formStyle"> End Date </label>
+			<input type ="text" id = "eDate" class="formStyle"></input>
+			<button type="button" id ="save"> Submit </button>
+
+
+		</form>
+	</div>
+	<p> Hi! see text added here </p>
+</body>
+</html>
