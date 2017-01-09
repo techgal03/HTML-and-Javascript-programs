@@ -29,5 +29,6 @@
 	<button onclick = "reversal()"> Click to reverse </button>
 	<p id = "dispArr"> The array wil be displayed here : </p>
 	<p id = "dispArrRev"> the reversed list will be displayed here : </p>
+	<--testing 1/8/2017-->
 </body>
 </html>
